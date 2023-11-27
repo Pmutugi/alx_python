@@ -1,2 +1,2 @@
-# alx_python
+# My Python Learning Repo
 this my Python learning Repo.
