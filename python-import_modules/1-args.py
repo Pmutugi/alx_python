@@ -1,6 +1,6 @@
 import sys
 def printarguments():
-    arguments = ["philluip", "john", "adrian"]
+    arguments = sys.argv[1:]
     #check number of arguments
     num_arguments = len(arguments)
      
