@@ -15,7 +15,7 @@ def printarguments():
         # Construct string for each argument with its position
     for i, arg in enumerate(arguments, 1):
          output += "{}: {}\n".format(i, arg)
-    return output   
+    return output.strip()   
 if __name__== '__main__':
 
      result = printarguments()
