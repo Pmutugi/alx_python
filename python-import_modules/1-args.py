@@ -16,4 +16,6 @@ def printarguments():
     for i, j in enumerate(arguments, 1):
         output +="{}: {} \n".format(i, j)
     return output   
-print(printarguments()) 
+if __name__== '__main__':
+
+    print(printarguments()) 
