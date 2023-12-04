@@ -3,4 +3,4 @@ if __name__== "__main__":
     b = 2
 from add_0 import add
 results= add(a, b)
-print("{} + {} = {} ".format(a, b, results, "\n"))
+print("{} + {} = {}".format(a, b, results, "\n"))
