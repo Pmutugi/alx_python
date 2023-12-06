@@ -5,9 +5,8 @@ def print_matrix_integer(matrix):
                 print("{:d}".format(number))
             else:
                 print("{:d}".format(number), end=' ')
-if __name__=="__main__":
-    
-     def print_matrix_integer(matrix):
+                  
+def print_matrix_integer(matrix):
             for row in matrix:
                 print(*row)
         
