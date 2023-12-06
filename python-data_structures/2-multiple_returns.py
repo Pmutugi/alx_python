@@ -3,8 +3,8 @@ def multiple_returns(sentence):
         return None
     else:
         sentence = ''
+        length = len(sentence)
+        first = sentence([0][0])
         for i in sentence:
-            length = len(sentence)
-            first = sentence([0][0])
-    print("Length: {:d} - First character: {}".format(length, first))
+            print("Length: {:d} - First character: {}".format(length, first))
         
