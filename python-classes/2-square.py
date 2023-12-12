@@ -13,6 +13,9 @@ class Square:
             
     def area(self):
         '''we are now calculating area of a square'''
+        return self.__size **2
+    
+if __name__=="__main__":
         my_square_1 = Square(3)
         print("Area: {}".format(my_square_1.area()))
 
