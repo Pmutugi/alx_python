@@ -17,7 +17,7 @@ class Square:
         else:
             self.__size = value
     def area(self):
-        return self.__**2
+        return self.__size ** 2
 if __name__=="__main__":
     my_square = Square(89)
     print("Area: {} for size: {}".format(my_square.area(), my_square.size))
