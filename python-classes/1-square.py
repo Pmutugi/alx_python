@@ -11,7 +11,7 @@ if __name__=="__main__":
     print(type(my_square_1))
     print(my_square_1.__dict__)
 
-    my_square_2 = Square()
+    my_square_2 = Square(2)
     print(type(my_square_2))
     print(my_square_2.__dict__)
 
