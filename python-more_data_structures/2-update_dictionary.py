@@ -1,4 +1,4 @@
-def update_and_print_sorted_dict(a_dictionary, key, value):
+def update_dictionary(a_dictionary, key, value):
     a_dictionary[key] = value
     return a_dictionary
 def print_sorted_dictionary(my_dict):
