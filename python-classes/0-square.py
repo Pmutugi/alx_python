@@ -2,7 +2,6 @@
     It does nothing hence the pass function .
 """
 class my_square:
-    pass
     """ To initialize size.
     the __ underscore are used to make the attribute private
     this means they cannot be accessed.
