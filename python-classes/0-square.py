@@ -1,10 +1,9 @@
-
-class my_square:
-    """this is a class of my_square.
+"""this is a class of my_square.
     It does nothing hence the pass function .
 """
+class my_square:
     pass
-    """below is a module to initialize size.
+    """ To initialize size.
     the __ underscore are used to make the attribute private
     this means they cannot be accessed.
     """
