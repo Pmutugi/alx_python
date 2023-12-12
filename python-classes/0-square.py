@@ -3,8 +3,8 @@
 """
 class Square:
     '''initializing size'''
-def __init__(self, size):
-    self.__size = size
+    def __init__(self, size):
+        self.__size = size
     
 if __name__=="__main__":
     '''this is a module to test the class'''
