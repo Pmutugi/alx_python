@@ -1,11 +1,9 @@
 def update_dictionary(a_dictionary, key, value):
-    # Check if the key exists in the dictionary
+    key = ""
     if key in a_dictionary:
-        # Key exists, replace the value
-        a_dictionary[key] = value
+        key.replace(a_dictionary, key)
     else:
-        # Key doesn't exist, add a new key-value pair
-        a_dictionary[key] = value
+        
         
 # def print_sorted_dictionary(my_dict):
 #     """ Print sorted dictionary """
