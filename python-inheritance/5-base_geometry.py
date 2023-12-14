@@ -9,6 +9,6 @@ class BaseGeometry:
         
         '''value less than zero'''
         if value <=0:
-            raise ValueError('name must be greater than 0')
+            raise ValueError('age must be greater than 0')
         
         
