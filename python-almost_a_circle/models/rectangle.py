@@ -1,6 +1,6 @@
 '''inherate the base properties using the import function'''
 # import models
-from __init__ import __init__
+import __init__
 # from models import base
 from base import Base 
 '''Now create a class rectangle that inherites properties of base class imported'''
