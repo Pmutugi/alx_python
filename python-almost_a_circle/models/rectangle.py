@@ -1,7 +1,7 @@
 '''inherate the base properties using the import function'''
 from base import Base
 '''Now create a class rectangle that inherites properties of base class imported'''
-class Rectangle:
+class Rectangle(Base):
     '''I will now initialize objects of the rectangle class using the init method below'''
     def __init__(self, width, height, x=0, y=0, id=None):
         self.__width = width
