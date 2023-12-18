@@ -6,6 +6,7 @@ class Square(Rectangle):
     '''this imports the super class functionalities of the super class'''
     def __init__(self, size, x=0, y=0, id=None):
         '''we import from the class rectangle here using the super method'''
+        self.size= size
         super().__init__(size, size, x, y, id)
         
         
