@@ -70,6 +70,15 @@ class Rectangle(Base):
     def __str__(self):
         '''this is a string function that overides the rectangle to print out the string representation of the area calculated'''
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+    '''this is an argument that represents represents arguments using *args function '''
+    def update(self, *args):
+        '''this is an argument that represents represents arguments using *args function '''
+        arguments= ['id', 'width', 'height', 'x', 'y']
+        for i, args in enumerate(args[:6]): 
+           setattr(self,arguments[i],args)
+            
+                
+        
         
 # if __name__ == "__main__":
 
@@ -95,3 +104,22 @@ class Rectangle(Base):
 #     except Exception as e:
 #         print("[{}] {}".format(e.__class__.__name__, e))
 
+# if __name__ == "__main__":
+
+#     r1 = Rectangle(10, 10, 10, 10)
+#     print(r1)
+
+#     r1.update(89)
+#     print(r1)
+
+#     r1.update(89, 2)
+#     print(r1)
+
+#     r1.update(89, 2, 3)
+#     print(r1)
+
+#     r1.update(89, 2, 3, 4)
+#     print(r1)
+
+#     r1.update(89, 2, 3, 4, 5)
+#     print(r1)
