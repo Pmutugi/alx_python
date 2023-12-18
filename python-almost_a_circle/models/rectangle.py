@@ -53,6 +53,9 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
            self.__y= value
+        '''defining area of the rectangle in the module below'''
+    def area(self):
+        area= self.__width * self.__height
 # if __name__ == "__main__":
 
 #     try:
