@@ -58,7 +58,9 @@ class Rectangle(Base):
         '''defining area of the rectangle in the module below. the area function reads from the set functions of width and height to obtain the actual area from the private instances'''
         area= self.__width * self.__height
         return area
+    '''this is the stdout function that prints out the # symbol without displaying the actual area'''
     def display(self):
+        '''this is the stdout function that prints out the # symbol without displaying the actual area'''
         for _ in range(self.__height):
             print("#" * self.__width)
         
