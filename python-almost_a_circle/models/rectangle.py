@@ -53,7 +53,7 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
            self.__y= value
-        '''defining area of the rectangle in the module below'''
+        '''defining area of the rectangle in the module below. the area function reads from the set functions of width and height to obtain the actual area from the private instances'''
     def area(self):
         area= self.__width * self.__height
 # if __name__ == "__main__":
