@@ -63,6 +63,10 @@ class Rectangle(Base):
         '''this is the stdout function that prints out the # symbol without displaying the actual area'''
         for _ in range(self.__height):
             print("#" * self.__width)
+    '''this is a string function that overides the rectangle to print out the string representation of the area calculated'''
+    def __str__(self):
+        '''this is a string function that overides the rectangle to print out the string representation of the area calculated'''
+        return f"[Rectangle] ({self.id}) {self.x} /{self.y} - {self.width}/{self.height}"
         
 # if __name__ == "__main__":
 
