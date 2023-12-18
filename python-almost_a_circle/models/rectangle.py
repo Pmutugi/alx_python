@@ -71,11 +71,16 @@ class Rectangle(Base):
         '''this is a string function that overides the rectangle to print out the string representation of the area calculated'''
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
     '''this is an argument that represents represents arguments using *args function '''
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''this is an argument that represents represents arguments using *args function '''
         arguments= ['id', 'width', 'height', 'x', 'y']
         for i, args in enumerate(args[:6]): 
            setattr(self,arguments[i],args)
+           
+        #the for loop for kwargs argument
+        for key, value in kwargs.items():
+            if key in arguments:
+                setattr(self, key, value)
             
                 
         
