@@ -66,7 +66,7 @@ class Rectangle(Base):
     '''this is a string function that overides the rectangle to print out the string representation of the area calculated'''
     def __str__(self):
         '''this is a string function that overides the rectangle to print out the string representation of the area calculated'''
-        return f"[Rectangle] ({self.id}) {self.x} /{self.y} - {self.width}/{self.height}"
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
         
 # if __name__ == "__main__":
 
