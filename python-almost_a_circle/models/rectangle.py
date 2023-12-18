@@ -1,5 +1,5 @@
 '''inherate the base properties using the import function'''
-from base import Base 
+from models.base import Base 
 '''Now create a class rectangle that inherites properties of base class imported'''
 class Rectangle(Base):
     '''I will now initialize objects of the rectangle class using the init method below'''
