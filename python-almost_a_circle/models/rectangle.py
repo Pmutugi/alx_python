@@ -56,6 +56,7 @@ class Rectangle(Base):
         '''defining area of the rectangle in the module below. the area function reads from the set functions of width and height to obtain the actual area from the private instances'''
     def area(self):
         area= self.__width * self.__height
+        return area
 # if __name__ == "__main__":
 
 #     try:
