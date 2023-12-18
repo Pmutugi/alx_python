@@ -62,7 +62,10 @@ class Rectangle(Base):
     def display(self):
         '''this is the stdout function that prints out the # symbol without displaying the actual area'''
         for _ in range(self.__height):
-            print("#" * self.__width)
+            print()
+        for i in range(self.__y):
+            print(" " * self.__x + "#" * self.__width)
+            
     '''this is a string function that overides the rectangle to print out the string representation of the area calculated'''
     def __str__(self):
         '''this is a string function that overides the rectangle to print out the string representation of the area calculated'''
