@@ -5,17 +5,17 @@ class Rectangle(Base):
     '''I will now initialize objects of the rectangle class using the init method below'''
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
     '''We are now setting the getters and setters for each variable in our constructor'''
     @property
     def width(self):
         return self.__width
     @width.setter
     def width(self, value):
-        if isinstance(value, int):
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value <= 0:
             raise ValueError("width must be > 0")
