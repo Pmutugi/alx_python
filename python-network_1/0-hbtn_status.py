@@ -5,6 +5,7 @@ url= 'https://alu-intranet.hbtn.io/status'
 '''using the get method to get the url requests'''
 response = requests.get(url)
 print("Body response:")
-print("\n -type: {}".format(type(response.text)))
 
-print("\n -Content: {}".format(response.text))
+print("\t- type: {}".format(type(response.text)))
+
+print("\t- Content: {}".format(response.text))
