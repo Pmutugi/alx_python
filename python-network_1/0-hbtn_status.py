@@ -7,4 +7,4 @@ response = requests.get(url)
 print("Body response:")
 print("\n -type: {}".format(type(url)))
 
-print("\n -Content: OK".format(response.status_code))
+print("\n -Content: {}".format(response.text))
