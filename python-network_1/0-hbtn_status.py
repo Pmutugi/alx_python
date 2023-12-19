@@ -4,6 +4,7 @@ import requests
 url= 'https://alu-intranet.hbtn.io/status'
 '''using the get method to get the url requests'''
 response = requests.get(url)
-# print("Body response:")
-print((type(url)))
-print((response.text))
+print("Body response:")
+print("\n -type: {}".format(type(response.text)))
+
+print("\n -Content: {}".format(response.text))
