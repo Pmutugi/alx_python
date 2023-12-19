@@ -19,18 +19,18 @@ def get_request_id(url):
             request_id = response.headers.get('X-Request-Id')
 
             # Display the value of the X-Request-Id header
-            print(f'The value of X-Request-Id is: {request_id}')
+            print({request_id})
         else:
-            print(f'Error: Request failed with status code {response.status_code}')
+            print({response.status_code})
 
     except requests.RequestException as e:
-        print(f'Error: {e}')
+        print({e})
 
-if __name__ == "__main__":
-    # Check if a URL is provided as a command-line argument
-    if len(sys.argv) != 2:
-        print("Usage: python script.py <URL>")
-        sys.exit(1)
+# if __name__ == "__main__":
+#     # Check if a URL is provided as a command-line argument
+#     if len(sys.argv) != 2:
+#         print("Usage: python script.py <URL>")
+#         sys.exit(1)
 
-    url = sys.argv[1]
-    get_request_id(url)
+#     url = sys.argv[1]
+#     get_request_id(url)
