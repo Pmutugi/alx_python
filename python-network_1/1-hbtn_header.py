@@ -1,7 +1,10 @@
 '''import requests packages installed in my local pc'''
 import sys
 import requests
-url = 'https://alu-intranet.hbtn.io/status'
+url = input('Enter URL: ') if len(sys.argv) < 2 else sys.argv[1]
+'''returning the response from the server'''
 response = requests.get(url)
-print(response.headers['X-Request-Id'])
-# ids=requests.requests_headers['x-Request-id']
+if 'X-Request-Id' in response.headers:
+    value = response.headers['X-Request-Id']
+    print(value)
+
