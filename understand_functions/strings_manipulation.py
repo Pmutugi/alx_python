@@ -47,7 +47,12 @@
 
 # import datetime
 # @staticmethod
-# def is_workday(day):
-@classmethod
-def    
+# # def is_workday(day):
+# @classmethod
+# def    
     
+import json
+''' i will use an example of a dictionary which i will convert it to json string'''
+'''json strings are vlight weight for easier rendering over the network'''
+'''I have imported json module'''
+people = {''}
