@@ -19,9 +19,9 @@ def get_request_id(url):
             request_id = response.headers.get('X-Request-Id')
 
             # Display the value of the X-Request-Id header
-            print({request_id})
+            print(f'{request_id}')
         else:
-            print({response.status_code})
+            print(f'{response.status_code}')
 
     except requests.RequestException as e:
         print({e})
