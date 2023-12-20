@@ -1,7 +1,7 @@
 '''import requests packages installed in my local pc'''
 import sys
 import requests
-url = 'https://alu-intranet.hbtn.io/status'
+# url = 'https://alu-intranet.hbtn.io/status'
 # response = requests.get(url[id])
 # for id, argv in enumerate(id, response):
    
