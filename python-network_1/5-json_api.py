@@ -2,7 +2,7 @@ import sys
 import requests
 ''' imports from the modules'''
 url = sys.argv[1]
-q = "" if len(sys.argv) < 1 else sys.argv[2]
+q = "" if len(sys.argv) < 1 else sys.argv[1]
 '''send data to the url'''
 letter ={
     'q':q
