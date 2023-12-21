@@ -6,7 +6,7 @@ import requests
 from requests.auth import HTTPBasicAuth
 username= sys.argv[1]
 access_token = sys.argv[2]
-response =requests.get(url=username, auth=HTTPBasicAuth(username, access_token))
+response =requests.get('https://github.com/Pmutugi/alx_python', auth=HTTPBasicAuth(username, access_token))
 try:
      if response.status_code==200:
          user_credentials =response.json()
