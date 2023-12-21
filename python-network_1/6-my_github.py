@@ -12,6 +12,6 @@ try:
          user_credentials =response.json()
          print(user_credentials['id'])
      else:
-        print('None')
+        print(response["value"])
 except ValueError:
-     print(response.text)
+     print("None")
