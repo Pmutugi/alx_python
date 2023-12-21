@@ -14,4 +14,4 @@ try:
      else:
         print('None')
 except ValueError:
-     print('None')
+     print(response.text)
