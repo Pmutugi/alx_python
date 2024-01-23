@@ -9,7 +9,7 @@ def Hello_HBNB():
 @app.route('/hbnb', strict_slashes=False)
 def HBNB():
     return 'HBNB'
-@app.route("/C/<text>",strict_slashes=False)
+@app.route("/c/<text>")
 def c_route (text):
     formated = text.replace('_', ' ')
     return f"C {formated}"
