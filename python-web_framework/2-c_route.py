@@ -10,8 +10,9 @@ def Hello_HBNB():
 def HBNB():
     return 'HBNB'
 @app.route("/C/<text>",strict_slashes=False)
-def Text (text):
-    return ' C is {text}'.format(text)
+def c_route (text):
+    formated=text.replace('_',' ')
+    return f"c{formated}"
 
 if __name__=="__main__":
     app.run(debug=True,host='0.0.0.0',port=5000)
