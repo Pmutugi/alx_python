@@ -17,6 +17,6 @@ def c_route (text):
 @app.route('/python')
 def python(text='is cool'):
     formarted = text.replace('_', ' ')
-    return  f"python {formarted}"
+    return  f"Python {formarted}"
 if __name__=="__main__":
     app.run(debug=True,host='0.0.0.0',port=5000)
