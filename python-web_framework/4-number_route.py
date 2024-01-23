@@ -13,8 +13,8 @@ def HBNB():
 def c_route (text):
     formated = text.replace('_', ' ')
     return f"C {formated}"
-@app.route("/python/<text>", strict_slashes=False)
-@app.route('/python/', strict_slashes=False)
+@app.route("/python/<text>")
+@app.route('/python/')
 def python(text='is cool'):
     formated = text.replace('_', ' ')
     return  f"Python {formated}"
