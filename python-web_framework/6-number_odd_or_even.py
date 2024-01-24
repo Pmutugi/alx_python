@@ -1,6 +1,4 @@
-'''WEB SERVER: dynamic routes in flask framework
-defining odd and even numbers.
-'''
+'''WEB SERVER: dynamic routes in flask framework'''
 from flask import Flask , render_template
 app = Flask(__name__)
 
@@ -30,11 +28,6 @@ def number_template(n):
 def display_odd_or_even(n):
     odd_or_even = "odd" if n % 2 != 0 else "even"
     return render_template('6-number_odd_or_even.html', n=n, odd_or_even=odd_or_even)
-# def number_odd_or_even(n):
-#     if n % 2 :
-#         return n is even
-#     else:
-#         return n is odd
    
 if __name__=="__main__":
     app.run(debug=True,host='0.0.0.0',port=5000)      
