@@ -1,4 +1,6 @@
-'''WEB SERVER: dynamic routes in flask framework'''
+'''WEB SERVER: dynamic routes in flask framework
+defining odd and even numbers.
+'''
 from flask import Flask , render_template
 app = Flask(__name__)
 
