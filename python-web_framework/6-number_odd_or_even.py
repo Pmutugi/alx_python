@@ -24,6 +24,7 @@ def integer (n):
 @app.route('/number_template/<int:n>', strict_slashes=False)
 def number_template(n):
     return render_template('5-number.html', n=n)
+#to define the functions of even and odd
 @app.route('/number_odd_or_even/<int:n')
 def display_odd_or_even(n):
     odd_or_even = "odd" if n % 2 != 0 else "even"
