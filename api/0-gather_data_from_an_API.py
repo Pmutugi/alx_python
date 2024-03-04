@@ -8,7 +8,7 @@ def get_employee_info(employee_id):
     employee_data = response.json()
     employee_name = employee_data['name']
 
-    # Fetch employee's TODO list
+    # Fetch employee's TODO list data
     todo_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
     response = requests.get(todo_url)
     todos = response.json()
