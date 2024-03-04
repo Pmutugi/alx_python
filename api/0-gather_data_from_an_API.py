@@ -21,7 +21,7 @@ def get_employee_info(employee_id):
     print(f"Employee {employee_name} is done with tasks({done_tasks}/{total_tasks}):")
     for todo in todos:
         if todo['completed']:
-            print(f"\t{todo['title']}")
+            print(f"\t {todo['title']}")
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
