@@ -3,52 +3,26 @@ import requests
 import sys
 
 
-def get_employee_info(employee_id):
-    # Fetch employee details
-    employee_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
-    response = requests.get(employee_url)
-    employee_data = response.json()
-    employee_name = employee_data['name']
+url = "https://jsonplaceholder.typicode.com/users"
+user_id = sys.argv[1]
+endpoint1 = f"{url}/{user_id}"
+endpoint2 = f"{url}/{user_id}/todos"
 
-    # Fetch employee's TODO list data
-    todo_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
-    response = requests.get(todo_url)
-    todos = response.json()
+response1 = requests.get(url=endpoint1)
+response2 = requests.get(url=endpoint2)
 
-    # Calculate TODO list progress
-    total_tasks = len(todos)
-    done_tasks = sum(1 for todo in todos if todo['completed'])
+data1 = response1.json()
+data2 = response2.json()
+myarray = []
+csvheader = ['USER_ID', 'USERNAME', 'TASK_COMPLETED_STATUS', 'TASK_TITLE']
 
-    # Print employee's TODO list progress
-    print(f"Employee {employee_name} is done with tasks({done_tasks}/{total_tasks}):")
-    for todo in todos:
-        if todo['completed']:
-            print(f"\t {todo['title']}")
-    #creating csv file for the employee
-    file_name = f"{employee_id}.csv"
-    with open (file_name,"w", newline='') as csv_file:
-        fieldnames=["USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"]
-        writer = csv.DictWriter(csv_file,fieldnames=fieldnames)
-        
-        '''write the csv headers'''
-        writer.writeheader()
-        for task in todos:
-            writer.writerow({
-                'USER_ID': employee_id,
-                "USERNAME":employee_data['username'],
-                "TASK_COMPLETED_STATUS":task["completed"],
-                "TASK_TITLE": task['title']
-            })
+for task in data2:  # Iterate over tasks from the second endpoint
+    listing = [task['userId'], data1['username'], task['completed'], task['title']]
+    myarray.append(listing)
 
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python script.py <employee_id>")
-        sys.exit(1)
-    
-    try:
-        employee_id = int(sys.argv[1])
-    except ValueError:
-        print("Employee ID must be an integer.")
-        sys.exit(1)
-    
-    get_employee_info(employee_id)
+
+with open(f"{user_id}.csv", 'w', encoding='UTF8', newline='') as f:
+    writer = csv.writer(f)
+
+    writer.writerow(csvheader)
+    writer.writerows(myarray)
